@@ -6,9 +6,13 @@
     "node": ">=0.10.0"
   },
   "scripts": {
+    "serve": "gulp serve",
+    "start": "gulp start",
     "build": "gulp bundle",
     "clean": "gulp clean",
-    "test": "gulp test"
+    "test": "gulp test",
+    "build-package-dev": "gulp build && gulp bundle && gulp package-solution && gulp serve --nobrowser",
+    "build-package-prod": "gulp build && gulp bundle --ship && gulp package-solution --ship"
   },
   "dependencies": {
     "@microsoft/sp-core-library": "1.7.1",
